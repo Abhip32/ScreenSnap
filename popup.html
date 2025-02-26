@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recording Buddy</title>
+  <script src="popup.js" defer></script>
+  <style>
+    body {
+      width: 300px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f0f4f8;
+    }
+    .container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #4A5BA7,#5F8FB3, #63B3A6);
+      color: white;
+      padding: 16px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .content {
+      padding: 16px;
+    }
+    .feature-cards {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .feature-card {
+      flex: 1;
+      background-color: #e6f0ff;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .feature-card h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #2563eb;
+    }
+    .feature-card p {
+      margin: 0;
+      color: #4b5563;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #4A5BA7;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+    button:hover {
+      background-color: #3b4fa8;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .icon {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+    .recording-options {
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    .option {
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .option-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .primary-button {
+      background-color: #4A5BA7;
+      color: white;
+    }
+    .secondary-button {
+      background-color: #e5e7eb;
+      color: #374151;
+    }
+    .primary-button:hover {
+      background-color: #3b4fa8;
+    }
+    .secondary-button:hover {
+      background-color: #d1d5db;
+    }
+    .recordingButton{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>ScreenSnap</h1>
+    </div>
+    <div class="content">
+      <div class="feature-cards">
+        <div class="feature-card">
+          <h3>No Extra Software</h3>
+          <p>Record directly in your browser</p>
+        </div>
+        <div class="feature-card">
+          <h3>100% Local</h3>
+          <p>Your data stays on your device</p>
+        </div>
+      </div>
+
+      <button id="startRecordingButton" class="recordingButton">
+        <span class="icon">🔴</span>Start Recording
+      </button>
+      <h3>Latest Recording</h3>
+      <div id="videoContainer"></div>
+    </div>
+  </div>
+</body>
+</html>
